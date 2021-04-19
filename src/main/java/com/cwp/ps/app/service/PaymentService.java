@@ -25,4 +25,10 @@ public class PaymentService {
 		// this should by 3rd party api call,ex/ paypal, paytm etc
 		return new Random().nextBoolean() ? "success" : "failed";
 	}
+
+	public Payment findPayHistoryByOrderId(int orderId) {
+		
+		return paymentRepository.findByOrderId(orderId);
+		
+	}
 }
